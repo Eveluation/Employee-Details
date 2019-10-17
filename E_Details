@@ -1,29 +1,39 @@
 class Employee{
 int age;
-String designation;
-Employee(int age,String designation)
-{
+float no_of_working_Hours;
+float no_of_days;
+float Rate_per_Hr;
+
+Employee(int age,float no_of_working_Hours,float no_of_days,float Rate_per_Hr){
 this.age=age;
-this.designation=designation;
+this.no_of_working_Hours=no_of_working_Hours;
+this.no_of_days=no_of_days;
+this.Rate_per_Hr=Rate_per_Hr;
 }
+
 void setAge(){
 System.out.println("Age : "+age);
 }
 
-void setDesignation(){
-System.out.println("Designation : " + designation );
+void cal_TotalRemuneration(){
+Float Remuneration_per_day;
+Float Total_Remuneration;
+Remuneration_per_day = Rate_per_Hr*no_of_working_Hours;
+Total_Remuneration = Remuneration_per_day*no_of_days;
+System.out.println("Remuneration_per_day : "+Remuneration_per_day);
+System.out.println("Total_Remuneration : Rs. "+Total_Remuneration);
 }
-
 }
 
 class Employee_Driver{
 public static void main(String[]args){
-Employee Emp1=new Employee(35,"Manager");
-Employee Emp2=new Employee(25,"Accountant");
+Employee Emp1=new Employee(35,7.5f,21,245.75f);
+Employee Emp2=new Employee(25,9.5f,19,175.5f);
 
 Emp1.setAge();
-Emp1.setDesignation();
+Emp1.cal_TotalRemuneration();
+System.out.println();
 Emp2.setAge();
-Emp2.setDesignation();
+Emp2.cal_TotalRemuneration();
 }
 }
