@@ -21,7 +21,7 @@ void setAge(){
 System.out.println("Age : "+age);
 }
 void setDesignation(){
-System.out.println("Designation : " + designation );
+System.out.println("Designation : " + Designation);
 }
 
 void cal_TotalRemuneration(){
