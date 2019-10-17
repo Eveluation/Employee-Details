@@ -1,14 +1,18 @@
 class Employee{
+String Emp_Name;
+String Emp_Id;
 int age;
 float no_of_working_Hours;
 float no_of_days;
 float Rate_per_Hr;
 
-Employee(int age,float no_of_working_Hours,float no_of_days,float Rate_per_Hr){
+Employee(int age,float no_of_working_Hours,float no_of_days,float Rate_per_Hr,String Emp_Name,String Emp_Id){
 this.age=age;
 this.no_of_working_Hours=no_of_working_Hours;
 this.no_of_days=no_of_days;
 this.Rate_per_Hr=Rate_per_Hr;
+this.Emp_Name=Emp_Name;
+this.Emp_Id=Emp_Id;
 }
 
 void setAge(){
@@ -23,16 +27,21 @@ Total_Remuneration = Remuneration_per_day*no_of_days;
 System.out.println("Remuneration_per_day : "+Remuneration_per_day);
 System.out.println("Total_Remuneration : Rs. "+Total_Remuneration);
 }
+void display(){
+System.out.println("Details of Employee :- "+"\nName : "+Emp_Name+"\nEmp Id : "+Emp_Id);
 }
+  }
 
 class Employee_Driver{
 public static void main(String[]args){
-Employee Emp1=new Employee(35,7.5f,21,245.75f);
-Employee Emp2=new Employee(25,9.5f,19,175.5f);
+Employee Emp1=new Employee("Nimali","Emp001",35,7.5f,21,245.75f);
+Employee Emp2=new Employee("Gayani","Emp009",25,9.5f,19,175.5f);
 
+Emp1.display();
 Emp1.setAge();
 Emp1.cal_TotalRemuneration();
 System.out.println();
+Emp2.display();
 Emp2.setAge();
 Emp2.cal_TotalRemuneration();
 }
