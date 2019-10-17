@@ -1,0 +1,19 @@
+class Employee{
+int age;
+Employee(int age){
+this.age=age;
+}
+void setAge(){
+System.out.println("Age : "+age);
+}
+}
+
+class Employee_Driver{
+public static void main(String[]args){
+Employee Emp1=new Employee(35);
+Employee Emp2=new Employee(25);
+
+Emp1.setAge();
+Emp2.setAge();
+}
+}
